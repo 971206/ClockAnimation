@@ -9,6 +9,8 @@ import UIKit
 import QuartzCore
 
 
+//MARK: - აქ ნაწილობრივ გიორგი დამეხმარა ❤
+
 class Clock: CAShapeLayer {
     
     required init?(coder aDecoder: NSCoder) {
@@ -54,6 +56,7 @@ class Clock: CAShapeLayer {
         var components = DateComponents()
         guard let time = time else {return}
         components = calendar.components([.NSHourCalendarUnit, .NSMinuteCalendarUnit], from: time)
+        
         guard let currentHour = components.hour else {return}
         guard let currentMinute = components.minute else {return}
         let minuteInDecimal = currentMinute / 60
@@ -81,8 +84,8 @@ class Clock: CAShapeLayer {
                                         endAngle: -(.pi / 2) + .pi * 2,
                                         clockwise: true)
         shapeLayer.path = circularPath.cgPath
-        shapeLayer.strokeColor = UIColor.green.cgColor
         shapeLayer.lineWidth = 8
+        shapeLayer.strokeColor = UIColor.green.cgColor
         shapeLayer.lineCap = CAShapeLayerLineCap.round
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.strokeEnd = 0
@@ -102,7 +105,7 @@ class Clock: CAShapeLayer {
         shapeLayer?.add(animation, forKey: "animatingStroke")
     }
     
-    func removeAnimation() {
+    private func removeAnimation() {
         shapeLayer?.removeAnimation(forKey: "animatingStroke")
     }
 }

@@ -23,9 +23,6 @@
                                     <constraint firstAttribute="height" constant="160" id="KXG-Rs-Iju"/>
                                 </constraints>
                                 <locale key="locale" localeIdentifier="en_150"/>
-                                <connections>
-                                    <action selector="chooseTime:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ei5-aI-X99"/>
-                                </connections>
                             </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
